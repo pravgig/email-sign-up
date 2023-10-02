@@ -1,3 +1,9 @@
+.container {
+  display: flex;
+  margin-inline: auto;
+  flex-direction: column;
+}
+
 .container-text {
   font-size: 2rem;
   text-align: center;
@@ -24,4 +30,15 @@
   outline: none;
   overflow: hidden;
   font-size: 1rem;
+  max-width: 10rem;
+}
+
+@media (width <=27rem) {
+  .container {
+    align-items: baseline;
+    padding: 0 2rem 0 1rem;
+    .container-text {
+      font-size: 1.5rem;
+    }
+  }
 }
