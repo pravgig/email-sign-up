@@ -1,0 +1,73 @@
+<div class="container">
+  <div>
+    <img
+      ngSrc="./assets/telephone.png"
+      priority="true"
+      height="176"
+      width="223"
+      sizes="(max-width: 768px) 100vw, 50vw"
+      alt="company main logo"
+    />
+  </div>
+  <div class="sub-container">
+    <div class="container--hero">
+      <h3>Subcribe to Direct Line for latest updates</h3>
+    </div>
+    <form
+      [formGroup]="signUpForm"
+      (ngSubmit)="registerUser(signUpForm)"
+      id="signUpForm"
+    >
+      <div
+        class="container--controls field"
+        *ngFor="let formField of emailRegistarForm.formControls"
+      >
+        <label
+          for
+          [id]="formField.labelName"
+          class="container--controls--label"
+          >{{ formField.labelName }}</label
+        >
+        <input
+          class="container--controls--field"
+          [formControlName]="formField.formControlName"
+          [type]="formField.type"
+          [id]="formField.labelName"
+          [placeholder]="formField.labelName"
+        />
+        <div
+          class="container--form---error"
+          *ngIf="
+            signUpForm.get(formField.formControlName)?.hasError('required') &&
+            (signUpForm.get(formField.formControlName)?.touched ||
+              signUpForm.get(formField.formControlName)?.dirty)
+          "
+        >
+          This entry is required
+        </div>
+
+        <div
+          class="container--form---error"
+          *ngIf="
+            signUpForm.get(formField.formControlName)?.hasError('email') &&
+            (signUpForm.get(formField.formControlName)?.touched ||
+              signUpForm.get(formField.formControlName)?.dirty)
+          "
+        >
+          Please enter valid email
+        </div>
+        <div
+          class="container--form---error"
+          *ngIf="
+            signUpForm.get(formField.formControlName)?.hasError('minLength')
+          "
+        >
+          Minimum length is needed
+        </div>
+      </div>
+      <div class="container--submit">
+        <button type="submit" class="button">Register</button>
+      </div>
+    </form>
+  </div>
+</div>
