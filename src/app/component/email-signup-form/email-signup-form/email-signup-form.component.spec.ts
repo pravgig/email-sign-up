@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EmailSignupFormComponent } from './email-signup-form.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EmailSignupService } from '../../../services/email-signup.service';
 
 describe('EmailSignupFormComponent', () => {
   let component: EmailSignupFormComponent;
@@ -9,6 +12,8 @@ describe('EmailSignupFormComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [EmailSignupFormComponent],
+      imports: [HttpClientModule, FormsModule, ReactiveFormsModule],
+      providers: [EmailSignupService],
     });
     fixture = TestBed.createComponent(EmailSignupFormComponent);
     component = fixture.componentInstance;
