@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    var(--brand-background-primary) 0%,
+    var(--brand-background-secondary) 60%
+  );
+}
