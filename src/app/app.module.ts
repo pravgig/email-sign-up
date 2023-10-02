@@ -7,9 +7,10 @@ import { EmailSignupFormComponent } from './component/email-signup-form/email-si
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { SucessComponent } from './component/success/sucess/sucess.component';
 
 @NgModule({
-  declarations: [AppComponent, EmailSignupFormComponent],
+  declarations: [AppComponent, EmailSignupFormComponent, SucessComponent],
   imports: [
     BrowserModule,
     CommonModule,

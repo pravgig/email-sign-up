@@ -5,7 +5,7 @@ import {
   UserForm,
 } from '../../app/models/registration-form';
 import { Observable } from 'rxjs/internal/Observable';
-import { FORM_SET } from 'src/form.json';
+import { FORM_SET } from '../../form.json';
 import { of } from 'rxjs';
 
 const httpOptions = {

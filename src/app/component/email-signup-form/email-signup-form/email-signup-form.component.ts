@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { EmailSignupService } from 'src/app/services/email-signup.service';
+import { EmailSignupService } from '../../../services/email-signup.service';
 import {
   EmailRegistrationFormSet,
   FormValidator,
